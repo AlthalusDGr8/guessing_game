@@ -6,7 +6,15 @@ fn main() {
     println!("Starting Game!");
     println!("Guess the number!");
 
-    let secret_number = rand::thread_rng().gen_range(1..10);
+    let small_number: u32 = 1;
+    let big_number: u32 = 20;
+
+    println!(
+        "I am thinking of a number between {} and {}.",
+        small_number, big_number
+    );
+
+    let secret_number = rand::thread_rng().gen_range(small_number..big_number);
     let mut number_of_guesses: i32 = 1;
 
     //  println!("The secret number is: {}", secret_number);
